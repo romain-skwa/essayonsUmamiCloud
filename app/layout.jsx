@@ -23,9 +23,9 @@ const shouldLoadUmami =
   Boolean(umamiScriptUrl);
 
 export const metadata = {
-  title: "Toon Sprint Club",
+  title: "Galerie Looney Tunes",
   description:
-    "Une demo Next.js en JSX avec App Router et une base prete pour Umami.",
+    "Une galerie en français consacrée aux personnages Looney Tunes, avec une base Next.js prête pour Umami.",
 };
 
 export default function RootLayout({ children }) {

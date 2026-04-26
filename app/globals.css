@@ -117,6 +117,33 @@ code {
   margin-top: 1.75rem;
 }
 
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.stat-card {
+  padding: 1rem;
+  border: 3px solid var(--border);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 8px 0 var(--border);
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.stat-card span {
+  display: block;
+  margin-top: 0.35rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
 .primary-button,
 .secondary-button {
   padding: 0.95rem 1.35rem;
@@ -196,6 +223,10 @@ code {
   gap: 1.25rem;
 }
 
+.character-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
 .character-card,
 .highlight-card,
 .cta-card {
@@ -215,6 +246,12 @@ code {
 .episode-item {
   margin-top: 0.85rem;
   line-height: 1.7;
+}
+
+.character-card {
+  background:
+    radial-gradient(circle at top right, rgba(255, 244, 176, 0.92) 0, transparent 26%),
+    rgba(255, 255, 255, 0.8);
 }
 
 .card-accent {
@@ -271,8 +308,11 @@ code {
 /* Les points de rupture gardent le layout agreable sur tablette et mobile. */
 @media (max-width: 900px) {
   .hero,
-  .character-grid,
   .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats {
     grid-template-columns: 1fr;
   }
 
